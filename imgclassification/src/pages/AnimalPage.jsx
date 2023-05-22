@@ -7,8 +7,29 @@ const [imageName , setImageName] = useState("")
 
 const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
+
+  // Create a FileReader instance
+  const reader = new FileReader();
+
+ // Define a callback function when the file is loaded
+ reader.onload = (e) => {
+  const previewImage = document.getElementById('previewImage');
+  previewImage.src = e.target.result;
+};
+
+
+  // Read the selected file as a data URL
+  reader.readAsDataURL(selectedFile);
+
+
   };
 
+
+
+
+
+
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -16,7 +37,6 @@ const handleFileChange = (event) => {
       console.log('No file selected.');
       return;
     }
-
     const formData = new FormData();
     formData.append('file', selectedFile);
 
@@ -34,15 +54,16 @@ const handleFileChange = (event) => {
         console.log('Error:', response.statusText);
       }
     } catch (error) {
-      console.log('Error:', error);
-    }
-  };
+      console.log('Error:', error)        ;}         };
 
 
   return (
     <div classNamer="home">
- <img className="home__image" src="https://wallpaperaccess.com/full/2329446.jpg" alt="" />
+<img className="home__image" src="https://wallpapershome.com/images/pages/pic_h/23724.jpg
+" alt="" />
+
 <div className='AnimalRow'><h2>please insert animal image <input type="file" onChange={handleFileChange}/><br/> 
+<img id="previewImage" alt="Preview" />
 our model predict : {imageName}
 </h2>
 </div>
