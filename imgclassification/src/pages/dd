@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React, { useState } from 'react';
 import './AnimalPage.css';
 
 function AnimalPage() {
@@ -48,27 +48,22 @@ function AnimalPage() {
     }
   };
 
-
-
   return (
-    <div classNamer="home">
-<img className="home__image" src="https://wallpapershome.com/images/pages/pic_h/23724.jpg" alt="" />
+    <div className="home">
+      <img className="home__image" src="https://wallpapershome.com/images/pages/pic_h/23724.jpg" alt="" />
 
-<div className='AnimalRow'><h2>please insert animal image <input type="file" onChange={handleFileChange}/><br/> 
-
-{previewImage && (
+      <div className="AnimalRow">
+        <h2>Please insert an animal image:</h2>
+        <input type="file" onChange={handleFileChange} />
+        <br />
+        {previewImage && (
           <img className="previewImage" src={previewImage} alt="Preview" />
         )}
-<br/> 
-our model predict : {imageName}
-</h2>
-</div><br/> 
-<button onClick={handleSubmit}>submit</button>
-</div>
-
-
-
-  )
+        <p>Our model predicts: {imageName}</p>
+      </div>
+      <button onClick={handleSubmit}>Submit</button>
+    </div>
+  );
 }
 
-export default AnimalPage
+export default AnimalPage;
