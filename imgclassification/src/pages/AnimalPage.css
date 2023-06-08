@@ -8,10 +8,24 @@
   }
    
 
+  html {
+    margin: 0;
+    padding: 0;
+  }
 
 
-
-
+  .imageContainer {
+    max-width: 500px;
+    max-height: 500px;
+    overflow: hidden;
+  }
+  
+  .previewImage {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
 .home__image{
   position: relative;
   width:-400% ;
@@ -19,16 +33,17 @@
   margin-bottom:-400px; 
   mask-image: linear-gradient(to bottom ,rgba(0, 0,0,1) , rgb(0, 0, 0,0));
 }
-
-.AnimalRow{
-  display: flex;
-  z-index: 1 ;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5px;
-  margin-top: 0 ;
-  margin-right: 5px;
+.AnimalRow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  }
+  margin-left: 5px;
+  margin-right: 5px;
 
- 
+}
+
+ .AnimalRow h2 {
+  color: white;
+}

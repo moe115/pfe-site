@@ -51,19 +51,19 @@ function AnimalPage() {
 
 
   return (
-    <div classNamer="home">
+    <div classNamer="home"> 
 <img className="home__image" src="https://wallpapershome.com/images/pages/pic_h/23724.jpg" alt="" />
 
 <div className='AnimalRow'><h2>please insert animal image <input type="file" onChange={handleFileChange}/><br/> <br/><br/><br/>
-
-{previewImage && (
-          <img className="previewImage" src={previewImage} alt="Preview" />
-        )}
+</h2>
+{previewImage && (<div className="imageContainer">
+          <img className="previewImage" src={previewImage} alt="Preview"   />
+          </div>   )}
 <br/> 
-<br/> 
+<br/> <h3>
 <button onClick={handleSubmit}>submit</button> <br/> 
 our model predict : {imageName}
-</h2>
+</h3>
 </div>
 </div>
 
