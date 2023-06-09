@@ -14,5 +14,5 @@ function FlowerPage() {
 </div>
 
   );
-}
+} 
 export default FlowerPage
