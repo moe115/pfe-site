@@ -1,10 +1,19 @@
 import React from 'react';
 import './home.css';
+import {Link } from 'react-router-dom'; // Assuming you're using React Router
 
 function Home() {
   return (
     <div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <div className="container">
+
+      <Link  to="/AnimalPage">
         <div className="head">
           <div className="ears">
             <div className="ear ear-l"></div>
@@ -30,6 +39,7 @@ function Home() {
           <div className="leg"></div>
           <div className="leg"></div>
         </div>
+        </Link>
       </div>
     </div>
   );

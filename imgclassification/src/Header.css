@@ -23,3 +23,7 @@ nav {
     color: #666;
   }
   
+  .homenav{
+  position: static ;
+    text: center
+  }
